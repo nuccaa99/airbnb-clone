@@ -1,0 +1,823 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+* {
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+    color: rgb(51, 49, 49);
+    list-style: none;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+}
+
+body,
+html,
+#root {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.darker {
+    background-color: rgb(245, 244, 244);
+    filter: brightness(70%);
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 60px;
+    border-bottom: 1px solid rgb(218, 214, 214);
+
+}
+
+.additional-search-header {
+    border-bottom: none;
+}
+
+
+.airbnb-logo {
+    width: 100px;
+}
+
+.search-icon {
+    width: 35px;
+}
+
+.languages-logo {
+    width: 15px;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.languages-logo:hover {
+    background-color: rgb(241, 241, 241);
+    cursor: pointer;
+}
+
+.profile-btn {
+    display: flex;
+    flex-direction: row;
+}
+
+.profile-btn:hover {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.profile-pic {
+    width: 23px;
+    border-radius: 50%;
+}
+
+.menu-logo {
+    width: 18px;
+}
+
+.header-search {
+    margin-left: 180px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid rgb(218, 214, 214);
+    border-radius: 50px;
+    width: 350px;
+    height: 47px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.header-search-btn {
+    padding: 0px;
+    height: 100%;
+    background-color: white;
+    font-size: 14px;
+    font-weight: bold;
+    color: rgb(51, 49, 49);
+
+}
+
+.header-search-btn.where {
+    padding-left: 25px;
+    padding-right: 13px;
+    border-radius: 50px;
+
+}
+
+.header-search-btn.who {
+    padding-right: 12px;
+    padding-left: 13px;
+    border-radius: 50px;
+}
+
+.header-search-btn-when {
+    padding: 0px 13px;
+    height: 24px;
+    line-height: 24px;
+    border-left: 1px solid rgb(218, 214, 214);
+    border-right: 1px solid rgb(218, 214, 214);
+}
+
+#add-guest-btn {
+    border: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+#add-guest-btn>p {
+    margin: 0;
+    opacity: 50%;
+    font-weight: normal;
+}
+
+.profile-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+}
+
+.profile-container>p {
+    font-size: 14px;
+    font-weight: bold;
+    color: rgb(51, 49, 49);
+    cursor: pointer;
+    border-radius: 20px;
+    padding: 10px;
+
+}
+
+.profile-container>p:hover {
+    background-color: rgb(241, 241, 241);
+}
+
+
+.profile-btn {
+    border: 1px solid rgb(218, 214, 214);
+    border-radius: 50px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    height: 40px;
+    width: 70px;
+}
+
+
+.filter-places-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 25px 40px 10px;
+    border-bottom: 1px solid rgb(218, 214, 214);
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+}
+
+.filter-place {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 70%;
+    border-bottom: 2px solid transparent;
+    font-weight: bold;
+
+}
+
+.filter-place>img {
+    width: 24px;
+}
+
+.filter-place>p {
+    font-size: 12px;
+}
+
+.filter-place:hover {
+    cursor: pointer;
+    border-bottom: 2px solid rgb(194, 190, 190);
+    opacity: 100%;
+}
+
+.filter-place:focus {
+    border-bottom: 2px solid rgb(19, 19, 19);
+    opacity: 100%;
+}
+
+.filter-icon {
+    width: 18px;
+}
+
+.filter-btn {
+    margin-bottom: 10px;
+    background-color: white;
+    font-size: 11px;
+    font-weight: bold;
+    border: 1px solid rgb(218, 214, 214);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+    padding: 5px 15px;
+}
+
+
+.star-icon {
+    width: 12px;
+    padding-right: 2px;
+}
+
+.place-img {
+    width: 320px;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 10px;
+    position: relative;
+}
+
+.places-container {
+    height: 70%;
+    padding: 40px 60px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.place-location-rating {
+    padding-top: 10px;
+    font-size: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.place-location {
+    font-weight: bold;
+}
+
+
+.place-container>p {
+    margin: 0;
+    padding: 5px 0px 10px;
+    font-size: 14px;
+    opacity: 70%;
+}
+
+.price {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.dropdown-list {
+    font-size: 14px;
+    position: absolute;
+    background-color: white;
+    right: 60px;
+    top: 60px;
+    z-index: 1001;
+    width: 275px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0px;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.dropdown-list>li {
+    padding: 15px 0 15px 25px;
+}
+
+.dropdown-list>li:hover {
+    background-color: rgb(241, 241, 241);
+    cursor: pointer;
+}
+
+.invisible {
+    display: none;
+}
+
+
+.border {
+
+    border-bottom: 1px solid rgb(218, 214, 214);
+}
+
+.bold {
+    font-weight: bold;
+}
+
+#wishlists,
+#account {
+    padding-bottom: 15px;
+}
+
+#log-out {
+    padding-bottom: 15px;
+}
+
+
+.search-btn>img {
+    width: 8px;
+}
+
+.questions-btns-container {
+    background-color: white;
+    padding-top: 10px;
+    z-index: 998;
+    position: absolute;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.questions-btns-container p {
+    margin: 0;
+}
+
+.question-buttons {
+    border: 1px solid rgb(218, 214, 214);
+    border-radius: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    width: 848px;
+    height: 65px;
+    background-color: rgb(236, 237, 238);
+}
+
+.where-btn,
+.when-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+    font-size: 12px;
+    padding-left: 15px;
+}
+
+.who-btn-question {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+    font-size: 12px;
+
+}
+
+.who-btn {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 73px;
+    border-radius: 50px;
+    padding-left: 20px;
+}
+
+
+.where-btn,
+.when-btn {
+    border-right: 1px solid rgb(218, 214, 214);
+}
+
+.where-btn {
+    padding-left: 20px;
+    padding-right: 120px;
+    background-color: rgb(236, 237, 238);
+    border-radius: 50px 0px 0px 50px;
+}
+
+
+.when-btn {
+    padding-right: 50px;
+    background-color: rgb(236, 237, 238);
+}
+
+.who-btn {
+    background-color: rgb(236, 237, 238);
+
+}
+
+.question-word {
+    font-weight: bold;
+}
+
+.question-word+p {
+    font-size: 13px;
+    opacity: 70%;
+}
+
+.question-word+input {
+    padding: 0px;
+    font-size: 13px;
+    font-weight: bold;
+    border: none;
+    width: 100%;
+    background-color: rgb(236, 237, 238);
+}
+
+.question-word+input::placeholder {
+    font-weight: 400;
+}
+
+
+.question-word+input:focus {
+    outline: none;
+}
+
+
+
+.where-btn:hover input {
+    background-color: rgb(221, 221, 221);
+}
+
+.where-btn.in-focus>input {
+    background-color: white;
+}
+
+.search-btn {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 45px;
+    border-radius: 50px;
+    background: rgb(227, 3, 41);
+    background: linear-gradient(90deg, rgba(227, 3, 41, 1) 0%, rgba(230, 23, 69, 1) 35%, rgba(255, 0, 99, 1) 100%);
+    padding: 0;
+}
+
+.search-btn>p {
+    padding-right: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+}
+
+.search-btn>img {
+    width: 24px;
+}
+
+.where-btn:hover,
+.when-btn:hover {
+    padding-top: 15px;
+    height: 66px;
+    background-color: rgb(221, 221, 221);
+    border-radius: 50px;
+}
+
+.who-btn:hover {
+    height: 65px;
+    background-color: rgb(221, 221, 221);
+    border-radius: 50px;
+}
+
+.where-btn.in-focus,
+.when-btn.in-focus {
+    padding-top: 14px;
+    height: 65px;
+    background-color: white;
+    border-radius: 50px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.who-btn.in-focus {
+    height: 65px;
+    background-color: white;
+    border-radius: 50px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.bigSearch-dropdown-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.bigsearch-container {
+    z-index: 999;
+    display: flex;
+    margin-top: 95px;
+    height: 500px;
+    position: absolute;
+}
+
+.bigsearch-location,
+.bigsearch-duration,
+.bigsearch-guests {
+    padding: 20px 30px;
+    border: 1px solid rgb(218, 214, 214);
+    border-radius: 30px;
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+}
+
+.bigsearch-duration {
+    padding: 20px 50px;
+}
+
+
+.recent-title,
+.region-title {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.clock-icon {
+    width: 20px;
+    padding: 10px;
+    background-color: rgb(242, 238, 238);
+    border-radius: 8px;
+}
+
+.bigsearch-recent {
+    width: 300px;
+    border-right: 1px solid rgb(243, 240, 240);
+}
+
+.bigsearch-regions {
+    width: 470px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.bigsearch-regions p {
+    font-size: 13px;
+    margin: 0;
+
+}
+
+.region-title {
+    padding-left: 50px;
+    padding-bottom: 20px;
+}
+
+.recent-title {
+    padding-bottom: 15px;
+}
+
+.bigsearch-regions img {
+    cursor: pointer;
+    width: 130px;
+    border-radius: 8px;
+    border: 1px solid rgb(218, 214, 214);
+}
+
+.bigsearch-regions img:hover {
+    border: 1px solid rgb(103, 101, 101);
+}
+
+.recent-searches {
+    cursor: pointer;
+    margin-left: -15px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+.recent-searches:hover {
+    background-color: rgb(247, 247, 247);
+}
+
+.recent-searches p {
+    margin: 0;
+}
+
+.recent-stay-location {
+    font-size: 14px;
+
+}
+
+.recent-stay-duration {
+    font-size: 12px;
+    opacity: 70%;
+    padding-top: 5px;
+
+}
+
+.bigsearch-duration {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tablist {
+    width: 280px;
+    height: 40px;
+    padding: 2px 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+    font-weight: bold;
+    background-color: rgb(241, 241, 241);
+    border-radius: 50px;
+    margin-bottom: 20px;
+}
+
+.tablist-item {
+    width: 93px;
+    height: 35px;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.tablist-item.true {
+    background-color: white;
+}
+
+.tablist-item:hover {
+    background-color: white;
+}
+
+.calendar-container {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+}
+
+.bigsearch-guests {
+    display: flex;
+    flex-direction: column;
+    height: 370px;
+    width: 320px;
+    margin-left: 480px;
+}
+
+.age-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgb(239, 237, 237);
+}
+
+.age-container.pets {
+    border-bottom: none;
+}
+
+
+.age-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 24px 4px;
+
+}
+
+
+.age-wrapper p {
+    margin: 0;
+}
+
+.age-title {
+    font-weight: bold;
+}
+
+.age-title+p {
+    font-size: 14px;
+    opacity: 70%;
+}
+
+
+.age-title.pet+p {
+    font-weight: bold;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.quantity-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+    font-size: 14px;
+}
+
+.quantity-wrapper button {
+    font-size: 19px;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    border-radius: 50px;
+    background-color: white;
+    border: 1px solid rgb(221, 221, 221)
+}
+
+
+/* calendar */
+
+.react-calendar {
+    border: none !important;
+
+}
+
+
+.react-calendar__navigation__label__labelText.react-calendar__navigation__label__labelText--from {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.react-calendar__month-view__weekdays__weekday {
+    font-size: 11px !important;
+    opacity: 70%;
+    text-transform: capitalize;
+}
+
+.react-calendar__tile.react-calendar__month-view__days__day.react-calendar__month-view__days__day--neighboringMonth {
+    opacity: 0%;
+
+}
+
+.react-calendar__navigation button:disabled {
+    background-color: white !important;
+    opacity: 0%;
+}
+
+
+
+.react-calendar__navigation button {
+    border-radius: 50%;
+
+}
+
+.react-calendar__navigation button:focus {
+    background-color: white !important;
+}
+
+.react-calendar__navigation__label:hover {
+    background-color: white !important;
+}
+
+
+.react-calendar__tile.react-calendar__tile--now.react-calendar__month-view__days__day.react-calendar__month-view__days__day--weekend {
+    background-color: white;
+}
+
+.react-calendar__tile.react-calendar__tile--now.react-calendar__month-view__days__day {
+    background-color: white;
+}
+
+.react-calendar__navigation__label {
+    pointer-events: none;
+}
+
+.react-calendar__tile {
+    max-width: 100%;
+    padding: 15px 15px !important;
+    border-radius: 50%;
+    font-weight: bold;
+}
+
+.react-calendar__tile:enabled:hover {
+    padding: 14px 14px !important;
+    background-color: white !important;
+    border: 1px solid black;
+}
+
+.react-calendar__tile--active {
+    background: black !important;
+}
+
+.react-calendar__tile:enabled:focus,
+.react-calendar__tile:enabled:active {
+    background: black !important;
+}
+
+.react-calendar__tile--active>abbr,
+.react-calendar__tile:focus>abbr {
+    color: white !important;
+}
+
+.react-calendar__tile:disabled {
+    cursor: default;
+    background-color: white !important;
+    opacity: 50%;
+}
+
+.react-calendar__tile:disabled>abbr {
+    color: rgb(51, 49, 49) !important;
+}

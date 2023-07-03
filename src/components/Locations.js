@@ -3,17 +3,17 @@ import locationData from "./datas/locationData";
 import Location from "./Location";
 import { nanoid } from 'nanoid';
 
-function Places({ locationDropdown }) {
-
+function Locations({ bigSearchDropdown }) {
+    console.log(bigSearchDropdown)
     return (
-        <div className={`${locationDropdown ? "places-container darker" : "places-container"}`}>
+        <div className={`${bigSearchDropdown ? "places-container darker" : "places-container"}`}>
             {locationData.places.map((item) => {
                 return (
-                    <Location data={item} key={nanoid()} locationDropdown={locationDropdown} />
+                    <Location data={item} key={nanoid()} bigSearchDropdown={bigSearchDropdown} />
                 )
             })}
         </div>
     )
 }
 
-export default Places;
+export default Locations;

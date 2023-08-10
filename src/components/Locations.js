@@ -4,7 +4,6 @@ import Location from "./Location";
 import { nanoid } from 'nanoid';
 
 function Locations({ bigSearchDropdown }) {
-    console.log(bigSearchDropdown)
     return (
         <div className={`${bigSearchDropdown ? "places-container darker" : "places-container"}`}>
             {locationData.places.map((item) => {

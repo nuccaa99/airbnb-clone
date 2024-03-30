@@ -1,6 +1,6 @@
 import React from "react";
 import locationfilterData from "./datas/locationfilterData";
-import FilterPlace from "./LocationFilterPlace";
+import LocationFilterCard from "./LocationFilterCard";
 import { nanoid } from 'nanoid';
 import filter from "./assets/filter.png";
 
@@ -10,7 +10,7 @@ function LocationFilter() {
         <div className="filter-places-container">
             {locationfilterData.places.map((item) => {
                 return (
-                    <FilterPlace place={item} key={nanoid()} />
+                    <LocationFilterCard place={item} key={nanoid()} />
                 )
             })}
             <button className="filter-btn">

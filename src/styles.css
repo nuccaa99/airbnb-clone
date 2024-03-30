@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 
+
 * {
     text-decoration: none;
     font-family: 'Inter', sans-serif;
@@ -173,14 +174,19 @@ header {
 
 
 .filter-places-container {
+    box-sizing: border-box;
+    width: 100%;
     display: flex;
     flex-direction: row;
+    overflow-x: auto;
     align-items: center;
     justify-content: space-evenly;
     padding: 25px 40px 10px;
     border-bottom: 1px solid rgb(218, 214, 214);
     box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
 }
+
+
 
 .filter-place {
     display: flex;
@@ -235,8 +241,12 @@ header {
     padding-right: 2px;
 }
 
+.place-img-wrapper {
+    object-fit: cover;
+}
+
 .place-img {
-    width: 320px;
+    width: 100%;
     height: 320px;
     object-fit: cover;
     border-radius: 10px;
@@ -244,10 +254,11 @@ header {
 }
 
 .places-container {
-    height: 70%;
     padding: 40px 60px;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
+    column-gap: 20px;
     align-items: center;
     justify-content: space-evenly;
 }
@@ -263,6 +274,11 @@ header {
 
 .place-location {
     font-weight: bold;
+}
+
+.place-container {
+    width: 320px;
+    height: 100%;
 }
 
 
@@ -820,4 +836,13 @@ header {
 
 .react-calendar__tile:disabled>abbr {
     color: rgb(51, 49, 49) !important;
+}
+
+
+/* responsive */
+
+@media screen and (max-width: 1055px) {
+    .header-search {
+        margin-left: 0px;
+    }
 }

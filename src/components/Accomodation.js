@@ -1,12 +1,12 @@
 import React from "react";
 import star from "./assets/star.png";
 
-
-
-function Location({ data, LocationDropdown }) {
+function Accomodation({ data, LocationDropdown }) {
     return (
         <div className="place-container">
-            <img src={data.url} alt="place-img" className={`${LocationDropdown ? "place-img darker" : "place-img"}`} />
+            <div className="place-img-wrapper">
+                <img src={data.url} alt="place-img" className={`${LocationDropdown ? "place-img darker" : "place-img"}`} />
+            </div>
             <div className="place-location-rating">
                 <div className="place-location">
                     <span>{data.country}, </span>
@@ -24,4 +24,4 @@ function Location({ data, LocationDropdown }) {
     )
 }
 
-export default Location;
+export default Accomodation;

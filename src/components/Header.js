@@ -3,7 +3,7 @@ import logo from "./assets/airbnb-logo.png";
 import languages from "./assets/languages.png";
 import ProfileDropDown from "./ProfileDropDown";
 import search from "./assets/search.png";
-import BigSearchDropdown from "./BigSearchDropdown";
+import BigSearchDropdown from "./SearchContainer/BigSearchDropdown";
 import useOutsideClick from "./hooks/useOutsideClick";
 
 

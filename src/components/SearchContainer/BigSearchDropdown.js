@@ -1,6 +1,5 @@
 import React, { useState, forwardRef } from "react";
-import searchwhite from "./assets/searchwhite.png";
-// import search from "./assets/search.png";
+import searchwhite from "../assets/searchwhite.png";
 import LocationBigSearch from "./LocationBigSearch";
 import DurationBigSearch from "./DurationBigSearch";
 import GuestBigSearch from "./GuestsBigSearch";
@@ -43,7 +42,6 @@ const BigSearchDropdown = forwardRef(({ checkinBigSearch, checkoutBigSearch, gue
                         <div className="search-btn">
                             <img src={searchwhite} alt="search icon" />
                             <p>Search</p>
-                            {/* <img src={search} alt="search-logo" className="search-icon" /> */}
                         </div>
                     </button>
 

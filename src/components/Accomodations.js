@@ -1,18 +1,18 @@
 import React from "react";
 import locationData from "./datas/locationData";
-import Location from "./Location";
+import Accomodation from "./Accomodation";
 import { nanoid } from 'nanoid';
 
-function Locations({ bigSearchDropdown }) {
+function Accomodations({ bigSearchDropdown }) {
     return (
         <div className={`${bigSearchDropdown ? "places-container darker" : "places-container"}`}>
             {locationData.places.map((item) => {
                 return (
-                    <Location data={item} key={nanoid()} bigSearchDropdown={bigSearchDropdown} />
+                    <Accomodation data={item} key={nanoid()} bigSearchDropdown={bigSearchDropdown} />
                 )
             })}
         </div>
     )
 }
 
-export default Locations;
+export default Accomodations;

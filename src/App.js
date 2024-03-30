@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import "./styles.css";
-import Header from "./Header";
-import LocationFilter from "./LocationFilter";
-import Locations from "./Locations";
+import Header from "./components/Header";
+import LocationFilter from "./components/LocationFilter";
+import Accomodations from "./components/Accomodations";
 
 
 
@@ -62,7 +62,7 @@ function App() {
                 locationClicked={locationClicked}
             />
             <LocationFilter />
-            <Locations bigSearchDropdown={bigSearchDropdown} />
+            <Accomodations bigSearchDropdown={bigSearchDropdown} />
         </>
     )
 }

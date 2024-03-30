@@ -1,7 +1,7 @@
 import React from "react";
 
 
-function LocationFilterPlace(props) {
+function LocationFilterCard(props) {
     return (
         <div className="filter-place">
             <img src={props.place.url} alt="filter-place-icon" />
@@ -10,4 +10,4 @@ function LocationFilterPlace(props) {
     )
 }
 
-export default LocationFilterPlace;
+export default LocationFilterCard;

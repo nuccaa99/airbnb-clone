@@ -1,11 +1,11 @@
 import React from "react";
-import earth from "./assets/earth.jpg";
-import europe from "./assets/europe.jpg";
-import italy from "./assets/italy.jpg";
-import turkey from "./assets/turkey.jpg";
-import samerica from "./assets/samerica.jpg";
-import usa from "./assets/usa.jpg";
-import clock from "./assets/clock.png";
+import earth from "../assets/earth.jpg";
+import europe from "../assets/europe.jpg";
+import italy from "../assets/italy.jpg";
+import turkey from "../assets/turkey.jpg";
+import samerica from "../assets/samerica.jpg";
+import usa from "../assets/usa.jpg";
+import clock from "../assets/clock.png";
 
 function LocationBigSearch() {
     return (
